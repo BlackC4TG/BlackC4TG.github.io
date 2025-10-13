@@ -51,12 +51,9 @@ main {
 footer {
     grid-area: footer;
     padding: 1rem;
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     align-items: center; /* centers horizontally */
     justify-content: center; /* centers vertically if needed */
     text-align: center; /* ensures text inside is centered */
-=======
->>>>>>> 0fe74ddddb3fbce9370802d932af2d48a03078db
 }

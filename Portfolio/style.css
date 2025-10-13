@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #222222;
+}
+
+.container {
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}

@@ -35,3 +35,20 @@ main {
     gap: 1rem;
     padding: 1rem;
 }
+
+
+.left {
+    grid-column: 2;
+    padding: 2rem;
+}
+
+.right {
+    grid-column: 2;
+    padding: 2rem;
+}
+
+
+footer {
+    grid-area: footer;
+    padding: 1rem;
+}

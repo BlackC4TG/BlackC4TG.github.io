@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>My Art Gallery</h1>
+      <nav>
+        <a href="#about">About</a> |
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Artworks Section -->
+    <section class="artworks">
+      <h2>Games</h2>
+      <div class="gallery">
+        <button class="scroll-btn scroll-left" onclick="scrollGallery(this, -1)">&#8592;</button>
+        <div class="gallery-track">
+          <img src="images/game1.jpg" alt="Game 1">
+          <img src="images/game2.jpg" alt="Game 2">
+          <img src="images/game3.jpg" alt="Game 3">
+          <img src="images/game4.jpg" alt="Game 4">
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollGallery(this, 1)">&#8594;</button>
+      </div>
+
+      <h2>Landscapes</h2>
+      <div class="gallery">
+        <button class="scroll-btn scroll-left" onclick="scrollGallery(this, -1)">&#8592;</button>
+        <div class="gallery-track">
+          <img src="images/land1.jpg" alt="Landscape 1">
+          <img src="images/land2.jpg" alt="Landscape 2">
+          <img src="images/land3.jpg" alt="Landscape 3">
+          <img src="images/land4.jpg" alt="Landscape 4">
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollGallery(this, 1)">&#8594;</button>
+      </div>
+
+      <h2>Buildings</h2>
+      <div class="gallery">
+        <button class="scroll-btn scroll-left" onclick="scrollGallery(this, -1)">&#8592;</button>
+        <div class="gallery-track">
+          <img src="images/building1.jpg" alt="Building 1">
+          <img src="images/building2.jpg" alt="Building 2">
+          <img src="images/building3.jpg" alt="Building 3">
+          <img src="images/building4.jpg" alt="Building 4">
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollGallery(this, 1)">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <img src="images/profile.jpg" alt="Profile Picture">
+      <p>Hello! I am an artist sharing my favorite creations and inspirations.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function scrollGallery(button, direction) {
+      const gallery = button.parentElement.querySelector('.gallery-track');
+      const scrollAmount = gallery.offsetWidth / 3; // scroll one "row" of 3 images
+      gallery.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
